@@ -27,6 +27,8 @@ $allowed_exc = array("jpg","jpeg","png");
 if($password1 != $password2){
     header("location: /codingclub/registration/passwordwrong.html");
     die("password didnt match");
+}else{
+    $password_hashed = password_hash($password1,PASSWORD_DEFAULT);
 }
 
 if ($_FILES['image']['error'] === 0) {
@@ -36,7 +38,7 @@ if ($_FILES['image']['error'] === 0) {
         $img_path = '/codingclub/assets/'.$image_upload_loc;
         if(move_uploaded_file($temp_name,$image_upload_loc)) {
             $insert = "INSERT INTO honeypot(id,rollno,name,email,number,year,branch,image,designation,password)
-                       VALUES(NULL,'$rollno','$name','$email','$number',$year,'$branch','$img_path','$designation','$password1')";
+                       VALUES(NULL,'$rollno','$name','$email','$number',$year,'$branch','$img_path','$designation','$password_hashed')";
             if(mysqli_query($conn,$insert)) {
                header("location: /codingclub/registration/success.html");
             }else{

@@ -19,7 +19,7 @@ if($result != null){
         $_SESSION['designation'] = $result['designation'];
         $_SESSION['admin_name'] = $result['name'];
 
-        header('location: /codingclub/cp/application.php');
+        header('location: /codingclub/cp/dashboard.php');
     }else{
         $err = "passsword wrong";
     }
