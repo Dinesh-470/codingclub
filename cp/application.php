@@ -55,7 +55,7 @@ if(empty($result)){
             max-width: 500px;
         }
         .container-center{
-            display:flex;
+            display:row;
             justify-content: center;
             align-items: center;
             margin-top: 10px;
