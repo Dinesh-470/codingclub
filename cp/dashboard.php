@@ -6,28 +6,6 @@ if(!$_SESSION['admin_login']){
     die();
 }
 
-$admin_year = $_SESSION['year'];
-$admin_branch = $_SESSION['branch'];
-
-$hostname = 'localhost';
-$user = 'root';
-$password = '';
-$db = 'codingclub';
-$conn = new mysqli($hostname,$user,$password,$db);
-
-if ($conn->connect_error)
-{
-    die("connection failed :".$conn->connect_error);
-}
-
-
-$sql = "select * from honeypot where year = '$admin_year' AND branch = '$admin_branch'";
-$res = mysqli_query($conn,$sql);
-$result = $res->fetch_all(MYSQLI_ASSOC);
-
-if(empty($result)){
-    $err = "no applications";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,10 +53,27 @@ if(empty($result)){
         }
         .main {
             text-align: center;
-           box-shadow: 0px 0px 5px #000;
+            box-shadow: 0px 0px 5px #000;
             background-color: #fff;
             color: darkred;
             padding: 20px;
+        }
+
+        ul {
+            display:flex;
+            list-style-type: none;
+            text-align:right;
+            
+        }
+        li {
+            padding:10px;
+            margin-right:20px;
+        }
+        a {
+            text-decoration:none;
+            font-size:20px;
+            padding:10px;
+            margin-right:5px;
         }
     </style>
 </head>
@@ -86,20 +81,15 @@ if(empty($result)){
     <header>
         <img src="/codingclub/assets/images/smsk1.png">
     </header>
-    <h1 class="main"><?php echo $_SESSION['admin_name']; ?></h1>
+    <h1 class="main"> Welcome, <?php echo $_SESSION['admin_name']; ?></h1><br>
     <div class="container-center">
-        <?php
-           foreach($result as $row) {
-        ?>
-            <div class="container">
-                <?php 
-                echo print_r($result);
-
-                ?>
+            <ul>
+                <li><a href="">Home</a></li><br>
+                <li><a href="application/application.php">Applications</a></li><br>
+            </ul>
+            <div class="container"> 
+                <h1><?php echo $_SESSION['year']."->".$_SESSION['branch']." ".$_SESSION['designation']; ?></h1>
             </div>
-        <?php
-           }
-        ?>
     </div>
 </body>
 </html>
