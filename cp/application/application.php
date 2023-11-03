@@ -51,21 +51,18 @@ if(empty($result)){
             margin-top: 10px;
             text-align: center;
         }
-
         .container {
             align-items: center;
             background-color: #fff;
             padding: 40px;
-            padding-right: 50px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 30px;
-            margin-bottom: 20px;
-    
+            margin:20px 10px;
+            overflow: auto;
         }
         .main {
             text-align: center;
-           box-shadow: 0px 0px 5px #000;
+            box-shadow: 0px 0px 5px #000;
             background-color: #fff;
             color: darkred;
             padding: 20px;
@@ -83,6 +80,7 @@ if(empty($result)){
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            box-shadow: 0px 10px 10px #000;
         }
         .accept {
             background-color: green;
@@ -96,7 +94,7 @@ if(empty($result)){
     <header>
         <img src="/codingclub/assets/images/smsk1.png">
     </header>
-    <h1 class="main">name</h1><br>
+    <h1 class="main">Welcome, <?php echo $_SESSION['admin_name']; ?></h1><br>
     <h2>your class applications:</h2>
     <div class="container-center">
         <?php 
@@ -106,9 +104,9 @@ if(empty($result)){
                 <h1><?php echo $row['rollno']; ?></h1><hr>
                 <img class="userimg" src="<?php echo $row['image']; ?>">
                 <h2><?php echo $row['name']; ?></h2>
-                <h2><?php echo $row['email']; ?></h2>
+                <h2 class="mail"><?php echo $row['email']; ?></h2>
                 <h2><?php echo $row['number']; ?></h2>
-                <h3><?php echo $row['year']; ?> -> <?php echo $row['branch']; ?></h3>
+                <h3><?php echo $row['year']; ?> ==> <?php echo $row['branch']; ?></h3>
                 <button type="submit" class="decline" onclick="account('decline','<?php echo $row['rollno']; ?>');">decline</button>
                 <button type="submit" class="accept" onclick="account('accept','<?php echo $row['rollno']; ?>');">accept</button>
             </div>
@@ -125,6 +123,16 @@ if(empty($result)){
             const addd = info.concat(andd);
             const link = addd.concat(number);
             window.location.href = link;
+        }
+    </script>
+    <script>
+        var num=1;
+        function reload() {
+            window.location.reload();
+            var =+1;
+        }
+        if(num != 1) {
+            reload();
         }
     </script>
 </body>

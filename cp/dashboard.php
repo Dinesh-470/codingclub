@@ -47,7 +47,7 @@ if(!$_SESSION['admin_login']){
             padding-right: 50px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 30px;
+            margin-top: 10px;
             margin-bottom: 20px;
     
         }
@@ -58,22 +58,32 @@ if(!$_SESSION['admin_login']){
             color: darkred;
             padding: 20px;
         }
-
+        .wrapper {
+            height: auto;
+            overflow: auto;
+            position: relative;
+            margin-top:0px;
+            background-color: #48d4ba;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
         ul {
             display:flex;
             list-style-type: none;
             text-align:right;
-            
+            font-size: 15px;
+           
         }
         li {
             padding:10px;
             margin-right:20px;
+            margin-left: 0px;
+            box-shadow: 5px 10px 10px #000;
+            background-color: #fff;
+            color:rebeccapurple;
+            border-radius: 20%;
         }
         a {
             text-decoration:none;
-            font-size:20px;
-            padding:10px;
-            margin-right:5px;
         }
     </style>
 </head>
@@ -82,13 +92,19 @@ if(!$_SESSION['admin_login']){
         <img src="/codingclub/assets/images/smsk1.png">
     </header>
     <h1 class="main"> Welcome, <?php echo $_SESSION['admin_name']; ?></h1><br>
-    <div class="container-center">
-            <ul>
-                <li><a href="">Home</a></li><br>
-                <li><a href="application/application.php">Applications</a></li><br>
-            </ul>
+    <div class="wrapper">
+        <ul>
+            <li><a href="/codingclub/">Home</a></li><br>
+            <li><a href="application/application.php">Applications</a></li><br>
+        </ul>
+    </div>
+    <div class="container-center">        
             <div class="container"> 
-                <h1><?php echo $_SESSION['year']."->".$_SESSION['branch']." ".$_SESSION['designation']; ?></h1>
+                <h1><?php echo $_SESSION['year']."->".$_SESSION['branch']." ".$_SESSION['designation']; ?></h1><hr>
+                <h2>your messages will be displayed here</h2>
+                <p>click <strong>application</strong> to know your class applications and accept them or decline them
+                   as instructed</p>
+                   
             </div>
     </div>
 </body>

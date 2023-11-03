@@ -11,9 +11,12 @@ $sql = "select password from login where rollno = '$name'";
 $res = mysqli_query($conn,$sql);
 $result = $res->fetch_assoc();
 
+$hashed_password = $result['password'];
+
 if($result != null){
-    if($password == $result['password']) {
+    if(password_verify($password,$hashed_password)) {
         $_SESSION['login'] = true;
+        $_SESSION['rollno']= $name;
         header('location: /codingclub');
     }else{
         $err = "passsword wrong";
