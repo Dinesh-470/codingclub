@@ -68,7 +68,8 @@ $result = $res->fetch_assoc();
             width: 100%;
             height: 50%;
             max-height: 600px;
-            border-radius: 0% 0% 0% 0%;
+            border-radius: 15px;
+            box-shadow:0px 0px 10px #000; 
         }
         </style>
 </head>
