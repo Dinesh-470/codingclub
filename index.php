@@ -22,7 +22,7 @@ $result = $res->fetch_assoc();
     <title>Codingclub</title>
     <link rel="icon" href="/codingclub/assets/images/smsk2.png" type="images/png">
     <style>
-     body {
+        body {
             /*background-image:linear-gradient(to right,#c2e59c,#64b3f4);*/
             background-color: #fffdf7;
             font-family: monospace;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding club -Register</title>
+    <title>Coding club - register</title>
     <link rel="icon" href="/codingclub/assets/images/smsk2.png">
     <style>
         body {

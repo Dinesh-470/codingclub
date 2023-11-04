@@ -12,7 +12,7 @@ if(!$_SESSION['admin_login']){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding club -register</title>
+    <title>Coding club -cp</title>
     <link rel="icon" href="/codingclub/assets/images/smsk2.png">
     <style>
         body {
