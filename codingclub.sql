@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2023 at 08:41 PM
+-- Generation Time: Nov 06, 2023 at 03:33 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -80,7 +80,10 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `rollno`, `password`) VALUES
-(2, '21U11A6729', '$2y$10$I/g6v86//PIEeT1PcKS6fu6XLciTGunAO5qNwZ7UUCTRac5W4D/GS');
+(2, '21U11A6729', '$2y$10$I/g6v86//PIEeT1PcKS6fu6XLciTGunAO5qNwZ7UUCTRac5W4D/GS'),
+(4, '21U11A6721', '$2y$10$AQiaRAjSVqk2D1I41dYnNe3Z9xfbBu77C.yGukseXEe0Xrl/SalvS'),
+(5, '21U11A6758', '$2y$10$XYPMmE6UJCNoetUL18fWK.ZQ4hwr9/ir0zKoWkwEuTtlxfsrUChBi'),
+(10, '21U11A6714', '$2y$10$zaiK9GU90Bf7R1rvzVOY9O0SAC5imEcex1GZezWPOBsrgRn0Sdy1O');
 
 -- --------------------------------------------------------
 
@@ -122,7 +125,10 @@ CREATE TABLE `student_details` (
 --
 
 INSERT INTO `student_details` (`id`, `rollno`, `name`, `email`, `number`, `year`, `branch`, `image`, `designation`) VALUES
-(2, '21U11A6729', 'Paidi Dineshreddy', 'dineshreddypaidi470@gmail.com', '8465006180', 3, 'CSE-DS', '/codingclub/assets/student_images/21U11A6729.png', 'member');
+(2, '21U11A6729', 'Paidi Dineshreddy', 'dineshreddypaidi470@gmail.com', '8465006180', 3, 'CSE-DS', '/codingclub/assets/student_images/21U11A6729.png', 'member'),
+(4, '21U11A6721', 'chary Raghavendra ', 'raghunani523@gmail.com', '9398047578', 3, 'CSE-DS', '/codingclub/assets/student_images/21U11A6721.jpeg', 'member'),
+(5, '21U11A6758', 'kumar Bharath ', 'padigebharathkumar3@gmail.com', '9392378965', 3, 'CSE-DS', '/codingclub/assets/student_images/21U11A6758.jpg', 'member'),
+(7, '21U11A6714', 'Jithender Jakkula', 'jithendharjakkula10@gmail.com', '9949404327', 3, 'CSE-DS', '/codingclub/assets/student_images/21U11A6714.jpg', 'member');
 
 --
 -- Indexes for dumped tables
@@ -172,13 +178,13 @@ ALTER TABLE `control`
 -- AUTO_INCREMENT for table `honeypot`
 --
 ALTER TABLE `honeypot`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `rejected_details`
@@ -190,7 +196,7 @@ ALTER TABLE `rejected_details`
 -- AUTO_INCREMENT for table `student_details`
 --
 ALTER TABLE `student_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

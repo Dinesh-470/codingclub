@@ -64,8 +64,11 @@ if(!$_SESSION['login']) {
     <h1 class="main">PROFILES</h1><br>
     <div class="container-center">
         <div class="container">
-        <h1></h1>
-        
+        <h1>you can view the profiles of others memebers of coding club</h1>
+        <h1>you can search for profiles and view them..<h1>
+        <h2>example </h2>
+        <h1><a href="profile.php?id=21U11A6729">21U11A6729</a></h1>   
+        <h1><a href="profile.php?id=21U11A6758">21U11A6758</a></h1>
         </div>
     </div>
 </body>

@@ -64,7 +64,7 @@ if(!$_SESSION['login']) {
     <h1 class="main">ABOUT</h1><br>
     <div class="container-center">
         <div class="container">
-        <h1></h1>
+        <h1>about codingclub </h1>
         
         </div>
     </div>

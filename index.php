@@ -93,7 +93,7 @@ $result = $res->fetch_assoc();
             height: 60px; 
             background-color: #262626;
             border: 2px solid #000;
-            border-radius: 50% 50% 0px 0px;
+            border-radius: 50% 50% 0% 0%;
             z-index: 2;
             display: flex;
             justify-content: center;
@@ -156,7 +156,7 @@ $result = $res->fetch_assoc();
                 <img src="<?php echo $result['image']; ?>">
             </div>
         </div>
-    </a>
+        </a>
     </div>
     </div>
 </body>

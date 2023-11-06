@@ -64,7 +64,9 @@ if(!$_SESSION['login']) {
     <h1 class="main"> TESTS </h1><br>
     <div class="container-center">
         <div class="container">
-        <h1></h1>
+        <h1>tests will be conducted here.., <br>weekly or on occations
+            instructed by HOD sir's and results will he displayed here
+        </h1>
         
         </div>
     </div>

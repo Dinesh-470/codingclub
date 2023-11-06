@@ -64,7 +64,7 @@ if(!$_SESSION['login']) {
     <h1 class="main">EVENTS</h1><br>
     <div class="container-center">
         <div class="container">
-        <h1></h1>
+        <h1>events will be displayed here..</h1>
         
         </div>
     </div>
