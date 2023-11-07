@@ -62,6 +62,8 @@ $result = $res->fetch_assoc();
             background-color: #fff;
             color: darkred;
             padding: 20px;
+            border-radius: 15px;
+            
         }
         .userimg {
             margin: 0;
@@ -83,5 +85,9 @@ $result = $res->fetch_assoc();
         <h1></h1>
         <img src="<?Php echo $result['image']; ?>" alt="" class="userimg">
         </div>
+    </div>
+    <h1>Your Activity:</h1>
+    <div class="container">
+
     </div>
 </body>

@@ -1,16 +1,26 @@
 <?php 
-include('connect.php');
+session_start();
+
+if(!$_SESSION['login']) {
+    header('Location: /codingclub/login/index.html');
+}
 
 if (isset($_GET['id'])) {
     $profileId = $_GET['id'];
 }else{
     echo "no profile selected";
+    die();
 }
+
+include('connect.php');
 
 $query = "SELECT * FROM student_details WHERE rollno = '$profileId'";
 $result = mysqli_query($conn,$query);
 $row = $result->fetch_assoc();
-
+if($row == null) {
+    echo "no user found";
+    die();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,12 +94,14 @@ $row = $result->fetch_assoc();
             height: 70%;
             width: 100%;
             box-shadow:2px 2px 10px #2e9e75;
+            max-width: 400px;
         }
         .container .img img {
             height: 100%;
             width: 100%;
             object-fit:contain;
-            border-radius: 5% 5% 20% 20%;            
+            border-radius: 5% 5% 20% 20%;  
+            max-width:400px;          
         }
         .name{
             color: #252525;
@@ -97,6 +109,16 @@ $row = $result->fetch_assoc();
             font-family: 'Times New Roman', Times, serif;
             font-size: 80%;
             padding-left: 20px;
+        }
+        .name2{
+            color: #252525;
+            margin-left: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 80%;
+            padding-left: 20px;
+        }
+        .name2:hover {
+            box-shadow: 0px 0px 10px red;
         }
     </style>
 </head>
@@ -113,6 +135,8 @@ $row = $result->fetch_assoc();
         </div>
         <div class="name"><h1><?php echo $row['rollno']; ?></h1></div>
         <div class="name"><h1><?php echo $row['year']; ?>==><?php echo $row['branch']; ?></h1></div>
+        <br>
+        <a href="mailto:<?php echo $row['email'];?>"><div class="name2"><h2><img src="https://cdn-icons-png.flaticon.com/512/865/865771.png" width="45px" height="40px"></h2></div></a>
     </div>
     </div>
 </body>

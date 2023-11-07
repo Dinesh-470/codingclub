@@ -62,7 +62,7 @@ $result = $res->fetch_assoc();
             list-style-type: none;
             text-align:right;
             font-size: 15px;
-           
+            margin-left: 2px;
         }
         li {
             padding:10px;
@@ -70,8 +70,12 @@ $result = $res->fetch_assoc();
             margin-left: 0px;
             box-shadow: 5px 10px 10px #000;
             background-color: #fff;
-            color:rebeccapurple;
+            color: #000;
             border-radius: 20%;
+            transition: padding 0.3s ease-in-out;
+        }
+        li:hover {
+            padding: 20px;
         }
         a {
             text-decoration:none;
@@ -131,16 +135,16 @@ $result = $res->fetch_assoc();
     <header>
         <img src="/codingclub/assets/images/smsk1.png">
     </header>
-    <h1 class="main"> Welcome, <?php echo $result['name'] ?></h1><br>
+    <h1 class="main"> Welcome. <?php echo $result['name'] ?></h1><br>
     <div class="wrapper">
         <ul>
-            <li><a href="/codingclub/">Home</a></li><br>
-            <li><a href="/codingclub/events">Events</a></li><br>
-            <li><a href="/codingclub/tests">Tests</a></li><br>
-            <li><a href="/codingclub/profiles">Profiles</a></li><br>
-            <li><a href="/codingclub/about.php">About</a></li><br>
+            <a href="/codingclub/"><li>Home</li></a><br>
+            <a href="/codingclub/events"><li>Events</li></a><br>
+            <a href="/codingclub/tests"><li>Tests</li></a><br>
+            <a href="/codingclub/profiles"><li>Profiles</li></a><br>
+            <a href="/codingclub/about.php"><li>About</li></a><br>
             
-            <li><a href="/codingclub/cp">Admin(cp)</a></li><br>
+            <a href="/codingclub/cp"><li>Admin(cp)</li></a><br>
         </ul>
     </div>
     <div class="container">
@@ -148,6 +152,7 @@ $result = $res->fetch_assoc();
         <h2>loading......</h2>
         <img src="https://cdn.pixabay.com/photo/2017/10/26/17/51/under-construction-2891888_1280.jpg">
     </div>
+
     <div class="fotter">
     <div class="img_conainer">
         <a href="profiles/myprofile.php">
