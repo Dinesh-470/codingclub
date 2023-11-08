@@ -67,7 +67,9 @@ function lead($conn,$id) {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             margin-top: 10px;
             margin-bottom: 20px;
+            width: 300px;
             text-align: center;
+            max-width: 500px;
         }
         .main {
             text-align: center;
@@ -116,13 +118,13 @@ function lead($conn,$id) {
         <img src="/codingclub/assets/images/smsk1.png">
     </header>
     <h1 class="main">PROFILES</h1><br>
-    <p>search for profiles..<p>
+        <div class="container-center">
         <div class="container">
-
+        <p>search for profiles..<p>
         <input type="search" placeholder="search for profile" autocomplete="on" id="rollno">
         <br><br>
         <div id="searchresults">
-
+        </div>
         </div>
         </div>
  
